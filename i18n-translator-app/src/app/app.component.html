@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxFlex>
+    <h1>i18n Translator</h1>
+    <span fxFlex></span>
+    <div>
+      <mat-select [value]="extensionService.getExtension()"
+        (selectionChange)="extensionService.setExtension($event.value)">
+        <mat-option *ngFor="let extension of extensionService.geExtensionList() | keyvalue" [value]="extension.key">
+          {{ extension.value }}
+        </mat-option>
+      </mat-select>
+    </div>
+    <div>
+      <mat-select [value]="countryService.getCountry()" (selectionChange)="countryService.setCountry($event.value)">
+        <mat-option *ngFor="let country of countryService.getCountryList() | keyvalue" [value]="country.key">
+          {{ country.value }} {{ country.key }}
+        </mat-option>
+      </mat-select>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
