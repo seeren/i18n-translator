@@ -1,0 +1,19 @@
+@mixin responsive($prefix) {
+    @for $n from 0 through 12 {
+        .#{$prefix}p-#{$n} {
+            padding: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}pt-#{$n} {
+            padding-top: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}pr-#{$n} {
+            padding-right: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}pb-#{$n} {
+            padding-bottom: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}pl-#{$n} {
+            padding-left: #{calc($n / 4) + 1}rem;
+        }
+    }
+}

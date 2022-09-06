@@ -1,0 +1,20 @@
+@use "./margins.scss" as margins;
+@use "./paddings.scss" as paddings;
+
+@import './colors.scss';
+@each $key, $value in (
+    '': 200,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+) {
+    @media (min-width: #{$value}px) {
+        $prefix: '';
+        @if $key != '' {
+            $prefix: $key + ':';
+        }
+        @include margins.responsive(#{$prefix});
+        @include paddings.responsive(#{$prefix});
+    }
+}

@@ -1,0 +1,142 @@
+@use "@angular/material" as mat;
+
+@each $key, $value in mat.$red-palette {
+    @if $key !=contrast {
+        .red-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$pink-palette {
+    @if $key !=contrast {
+        .pink-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$purple-palette {
+    @if $key !=contrast {
+        .purple-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$deep-purple-palette {
+    @if $key !=contrast {
+        .deep-purple-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$indigo-palette {
+    @if $key !=contrast {
+        .indigo-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$blue-palette {
+    @if $key !=contrast {
+        .blue-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$light-blue-palette {
+    @if $key !=contrast {
+        .light-blue-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$cyan-palette {
+    @if $key !=contrast {
+        .cyan-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$teal-palette {
+    @if $key !=contrast {
+        .teal-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$green-palette {
+    @if $key !=contrast {
+        .green-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$light-green-palette {
+    @if $key !=contrast {
+        .light-green-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$lime-palette {
+    @if $key !=contrast {
+        .lime-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$yellow-palette {
+    @if $key !=contrast {
+        .yellow-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$amber-palette {
+    @if $key !=contrast {
+        .amber-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$orange-palette {
+    @if $key !=contrast {
+        .orange-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$deep-orange-palette {
+    @if $key !=contrast {
+        .deep-orange-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$brown-palette {
+    @if $key !=contrast {
+        .brown-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$grey-palette {
+    @if $key !=contrast {
+        .grey-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$blue-grey-palette {
+    @if $key !=contrast {
+        .blue-grey-#{$key} {
+            color: $value;
+        }
+    }
+}
+@each $key, $value in mat.$grey-palette {
+    @if $key !=contrast {
+        .grey-#{$key} {
+            color: $value;
+        }
+    }
+}

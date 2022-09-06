@@ -1,0 +1,22 @@
+@mixin responsive($prefix) {
+    .#{$prefix}m-auto {
+        margin: auto;
+    }
+    @for $n from 0 through 12 {
+        .#{$prefix}m-#{$n} {
+            margin: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}mt-#{$n} {
+            margin-top: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}mr-#{$n} {
+            margin-right: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}mb-#{$n} {
+            margin-bottom: #{calc($n / 4) + 1}rem;
+        }
+        .#{$prefix}ml-#{$n} {
+            margin-left: #{calc($n / 4) + 1}rem;
+        }
+    }
+}
