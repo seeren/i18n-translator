@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TranslationsRoutingModule } from './translations-routing.module';
 import { TranslationsComponent } from './translations.component';
 import { EditorComponent } from './editor/editor.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { EditorComponent } from './editor/editor.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     TranslationsRoutingModule
-  ]
+  ],
 })
 export class TranslationsModule { }

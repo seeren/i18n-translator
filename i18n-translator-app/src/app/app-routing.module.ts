@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import("./translations/translations.module").then(m => m.TranslationsModule),
-  }
-  ,
+    loadChildren: () => import('./translations/translations.module')
+      .then(m => m.TranslationsModule),
+  },
   {
-    path: "**",
+    path: '**',
     redirectTo: '/',
-  }
+  },
 ];
 
 @NgModule({

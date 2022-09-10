@@ -8,27 +8,29 @@ import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 })
 export class CountryService {
 
-  private country: String;
+  private _country: String;
 
-  private countryList: Record<string, string>;
+  private _countryList: Record<string, string>;
 
   constructor() {
-    this.country = 'FR';
-    this.countryList = countries.reduce((
-      previous, current) => ({ ...previous, [current]: getUnicodeFlagIcon(current) }),
-      {}
-    );
-  }
-  public getCountry(): String {
-    return this.country;
+    this._country = 'FR';
+    this._countryList = countries.reduce((
+      previous, current) => ({
+        ...previous,
+        [current]: getUnicodeFlagIcon(current)
+      }), {});
   }
 
-  public setCountry(country: String): void {
-    this.country = country;
+  get countryList(): Record<string, string> {
+    return this._countryList;
   }
 
-  public getCountryList(): Record<string, string> {
-    return this.countryList;
+  get country(): String {
+    return this._country;
+  }
+
+  set country(country: String) {
+    this._country = country;
   }
 
 }

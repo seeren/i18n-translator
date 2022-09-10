@@ -7,19 +7,20 @@ import { Extension } from '../models/extension.enum';
 })
 export class ExtensionService {
 
-  private extension: Extension = Extension.YAML;
+  private _extension: Extension = Extension.YAML;
 
-  public extensionList: Record<string, string> = Extension;
+  public _extensionList: Record<string, string> = Extension;
 
-  public getExtension(): Extension {
-    return this.extension;
-  }
-  public setExtension(extension: Extension): void {
-    this.extension = extension;
+  get extensionList(): Record<string, string> {
+    return this._extensionList;
   }
 
-  public geExtensionList(): Record<string, string> {
-    return this.extensionList;
+  get extension(): Extension {
+    return this._extension;
+  }
+
+  set extension(extension: Extension) {
+    this._extension = extension;
   }
 
 }
