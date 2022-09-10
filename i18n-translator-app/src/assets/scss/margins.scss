@@ -1,22 +1,25 @@
+$base: 0.25;
+$coeficient: 4;
+
 @mixin responsive($prefix) {
     .#{$prefix}m-auto {
         margin: auto;
     }
     @for $n from 0 through 12 {
         .#{$prefix}m-#{$n} {
-            margin: #{calc($n / 4) + 1}rem;
+            margin: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}mt-#{$n} {
-            margin-top: #{calc($n / 4) + 1}rem;
+            margin-top: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}mr-#{$n} {
-            margin-right: #{calc($n / 4) + 1}rem;
+            margin-right: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}mb-#{$n} {
-            margin-bottom: #{calc($n / 4) + 1}rem;
+            margin-bottom: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}ml-#{$n} {
-            margin-left: #{calc($n / 4) + 1}rem;
+            margin-left: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
     }
 }

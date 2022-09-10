@@ -1,19 +1,22 @@
+$base: 0.25;
+$coeficient: 4;
+
 @mixin responsive($prefix) {
     @for $n from 0 through 12 {
         .#{$prefix}p-#{$n} {
-            padding: #{calc($n / 4) + 1}rem;
+            padding: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}pt-#{$n} {
-            padding-top: #{calc($n / 4) + 1}rem;
+            padding-top: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}pr-#{$n} {
-            padding-right: #{calc($n / 4) + 1}rem;
+            padding-right: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}pb-#{$n} {
-            padding-bottom: #{calc($n / 4) + 1}rem;
+            padding-bottom: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
         .#{$prefix}pl-#{$n} {
-            padding-left: #{calc($n / 4) + 1}rem;
+            padding-left: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
     }
 }

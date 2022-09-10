@@ -1,5 +1,8 @@
 @use "./margins.scss" as margins;
 @use "./paddings.scss" as paddings;
+@use "./dimensions.scss" as dimensions;
+@use "./displays.scss" as displays;
+@use "./flexs.scss" as flexs;
 
 @import './colors.scss';
 @each $key, $value in (
@@ -16,5 +19,8 @@
         }
         @include margins.responsive(#{$prefix});
         @include paddings.responsive(#{$prefix});
+        @include dimensions.responsive(#{$prefix});
+        @include displays.responsive(#{$prefix});
+        @include flexs.responsive(#{$prefix});
     }
 }
