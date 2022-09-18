@@ -1,5 +1,7 @@
 @use "@angular/material" as mat;
 
+$colors-map: ();
+
 @each $name,
     $color
         in (
@@ -26,6 +28,12 @@
 {
     @each $level, $value in $color {
         @if $level !=contrast {
+            $colors-map: map-merge(
+                $colors-map,
+                (
+                    "#{$name}-#{$level}": $value,
+                )
+            );
             .#{$name}-#{$level} {
                 color: $value;
             }
@@ -39,5 +47,11 @@
                 background-color: $value;
             }
         }
+    }
+}
+
+:root {
+    @each $key, $value in $colors-map {
+        --#{$key}: #{$value};
     }
 }

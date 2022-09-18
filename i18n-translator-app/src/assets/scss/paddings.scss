@@ -18,5 +18,11 @@ $coeficient: 4;
         .#{$prefix}pl-#{$n} {
             padding-left: #{calc($n / $coeficient) * calc(1 + $base)}rem;
         }
+        .#{$prefix}p-#{$n},
+        .#{$prefix}pt-#{$n},
+        .#{$prefix}pb-#{$n},
+        .#{$prefix}pl-#{$n} {
+            box-sizing: border-box;
+        }
     }
 }

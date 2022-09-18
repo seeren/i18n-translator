@@ -3,6 +3,7 @@
 @use "./dimensions.scss" as dimensions;
 @use "./displays.scss" as displays;
 @use "./flexs.scss" as flexs;
+@use "./overflows.scss" as overflows;
 
 @import './colors.scss';
 @each $key, $value in (
@@ -22,5 +23,6 @@
         @include dimensions.responsive(#{$prefix});
         @include displays.responsive(#{$prefix});
         @include flexs.responsive(#{$prefix});
+        @include overflows.responsive(#{$prefix});
     }
 }

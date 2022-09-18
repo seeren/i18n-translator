@@ -14,13 +14,13 @@ $coeficient: 25;
             height: $value;
         }
         .#{$prefix}h-min-#{$key} {
-            height: $value;
+            min-height: $value;
         }
         .#{$prefix}w-#{$key} {
             width: $value;
         }
         .#{$prefix}w-min-#{$key} {
-            width: $value;
+            min-width: $value;
         }
     }
 }
