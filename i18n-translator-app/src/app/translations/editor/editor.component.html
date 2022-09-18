@@ -1,5 +1,16 @@
-<div fxLayout="row" fxFlex="0 1 100%">
+<div fxLayout="row" fxLayout.sm="column" fxFlex="0 0 100%" fxLayoutAlign="space-around" fxLayoutGap="1.25em"
+    class="p-4">
 
-    <div fxFlex="50%">Foo</div>
-    <div fxFlex="50%">Bar</div>
+    <div fxFlex="50%" class="bg-grey-50 overflow-auto editor-zone">
+        <div #code contenteditable="true" #foo (click)="listen()">
+            foo:
+            - bar
+            - baz
+        </div>
+    </div>
+
+    <div fxFlex="50%" class="bg-grey-50 overflow-auto  editor-zone">
+        <app-highlight language="yml" [code]="code.textContent"></app-highlight>
+    </div>
+
 </div>
