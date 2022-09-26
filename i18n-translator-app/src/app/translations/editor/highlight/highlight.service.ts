@@ -14,9 +14,8 @@ declare var Prism: any;
 })
 export class HighlightService {
 
-  public highlightElement(elementRef: ElementRef): ElementRef {
-    Prism.highlightElement(elementRef.nativeElement);
-    return elementRef;
+  public highlightElement(elementRef: ElementRef): void {
+    return Prism.highlightElement(elementRef.nativeElement);
   }
 
 }
