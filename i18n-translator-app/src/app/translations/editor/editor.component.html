@@ -1,16 +1,15 @@
 <div fxLayout="row" fxLayout.sm="column" fxFlex="0 0 100%" fxLayoutAlign="space-around" fxLayoutGap="1.25em"
     class="p-4">
 
-    <div fxFlex="50%" class="bg-grey-50 overflow-auto editor-zone">
-        <div #code contenteditable="true" #foo (click)="listen()">
-            foo:
-            - bar
-            - baz
-        </div>
+    <div fxFlex="50%" class="bg-grey-50 overflow-auto border relative">
+        <textarea #textarea [(ngModel)]="code" fxFlex="100%" class="overflow-auto"
+            (keydown.Tab)="indent($event)"></textarea>
+        <app-highlight language="yml" [code]="code" fxFlex="100% 100%" class="absolute overflow-auto" tabindex="-1">
+        </app-highlight>
     </div>
 
-    <div fxFlex="50%" class="bg-grey-50 overflow-auto  editor-zone">
-        <app-highlight language="yml" [code]="code.textContent"></app-highlight>
+    <div fxFlex="50%" class="bg-grey-50 overflow-auto border">
+        <app-highlight language="yml" [code]="code"></app-highlight>
     </div>
 
 </div>

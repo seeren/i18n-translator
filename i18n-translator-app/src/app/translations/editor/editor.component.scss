@@ -2,11 +2,29 @@
     width: 100%;
 }
 
-.editor-zone {
+.border {
     border: solid 2px var(--grey-200);
-    font-size: 1.1em;
-    line-height: 1.1em;
 }
-[contenteditable] {
-    white-space: nowrap;
+
+textarea {
+    &:focus {
+        border: none;
+        outline: none !important;
+    }
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    resize: none;
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5em;
+    tab-size: 4;
+    hyphens: none;
 }

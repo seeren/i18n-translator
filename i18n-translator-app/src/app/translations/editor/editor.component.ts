@@ -5,13 +5,14 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss']
 })
-export class EditorComponent  {
-  @ViewChild('foo') element!: ElementRef;
+export class EditorComponent {
 
-  constructor() { }
+  @ViewChild('textarea') element!: ElementRef;
 
-  listen () : void {
-    console.log(this.element.nativeElement.textContent);
-    
+  public code: string = '';
+
+  indent(event: Event) {
+    event.preventDefault();
+    this.code += '    ';
   }
 }
