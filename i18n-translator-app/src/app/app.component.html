@@ -1,18 +1,30 @@
 <mat-toolbar color="primary" class="mat-elevation-z2">
   <mat-toolbar-row>
     <mat-icon class="md-padding mr-1">language</mat-icon>
-    <span class="mat-body-2">Internationalize</span>
+    <span class="mat-body">Internationalize</span>
     <span fxFlex></span>
-    <div fxFlex="10rem" fxLayoutAlign="space-around">
-      <mat-select class="mat-small" fxFlex="4rem" [value]="extensionService.extension"
+    <div 
+      fxFlex="10rem" 
+      fxLayoutAlign="space-around">
+      <mat-select 
+        class="mat-body" 
+        fxFlex="4rem" 
+        [value]="extensionService.extension" 
         (selectionChange)="extensionService.extension = $event.value">
-        <mat-option *ngFor="let extension of extensionService.extensionList | keyvalue" [value]="extension.key">
+        <mat-option 
+          *ngFor="let extension of extensionService.extensionList | keyvalue"
+          [value]="extension.key">
           {{ extension.value }}
         </mat-option>
       </mat-select>
-      <mat-select class="mat-small" fxFlex="4rem" [value]="countryService.country"
+      <mat-select 
+        class="mat-body"
+        fxFlex="4rem"
+        [value]="countryService.country"
         (selectionChange)="countryService.country = $event.value">
-        <mat-option *ngFor="let country of countryService.countryList | keyvalue" [value]="country.key">
+        <mat-option 
+          *ngFor="let country of countryService.countryList | keyvalue"
+          [value]="country.key">
           {{ country.value }}&nbsp;&nbsp;&nbsp;{{ country.key }}
         </mat-option>
       </mat-select>

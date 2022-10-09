@@ -1,15 +1,32 @@
-<div fxLayout="row" fxLayout.sm="column" fxFlex="0 0 100%" fxLayoutAlign="space-around" fxLayoutGap="1.25em"
-    class="p-4">
-
-    <div fxFlex="50%" class="bg-grey-50 overflow-auto border relative">
-        <textarea #textarea [(ngModel)]="code" (keydown.Tab)="indent($event)"
-            class="absolute left-0 top-0 w-min-100 h-min-100 overflow-hidden"></textarea>
-        <app-highlight language="yml" [code]="code" (area)="resize($event)" class="absolute left-0 top-0" tabindex="-1">
+<div
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxFlex="0 0 100%"
+  fxLayoutAlign="space-around"
+  fxLayoutGap="1.25em"
+  class="p-4">
+    <div
+      fxFlex="50%"
+      class="bg-grey-50 overflow-auto border relative">
+        <textarea
+          #textarea
+          [(ngModel)]="code"
+          (keydown.Tab)="indent($event)"
+          class="absolute left-0 top-0 w-min-100 h-min-100 overflow-hidden"></textarea>
+        <app-highlight
+          language="yml"
+          [code]="code"
+          (area)="resize($event)"
+          class="absolute left-0 top-0">
         </app-highlight>
     </div>
 
-    <div fxFlex="50%" class="bg-grey-50 overflow-auto border">
-        <app-highlight language="yml" [code]="code"></app-highlight>
+    <div 
+      fxFlex="50%"
+      class="bg-grey-50 overflow-auto border">
+        <app-highlight
+          language="yml"
+          [code]="code"></app-highlight>
     </div>
 
 </div>

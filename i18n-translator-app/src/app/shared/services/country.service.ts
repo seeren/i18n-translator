@@ -16,9 +16,9 @@ export class CountryService {
     this._country = 'FR';
     this._countryList = countries.reduce((
       previous, current) => ({
-        ...previous,
-        [current]: getUnicodeFlagIcon(current)
-      }), {});
+      ...previous,
+      [current]: getUnicodeFlagIcon(current)
+    }), {});
   }
 
   get countryList(): Record<string, string> {

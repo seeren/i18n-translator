@@ -4,6 +4,7 @@ import {
   ElementRef,
   EventEmitter,
   Input,
+  OnChanges,
   Output,
   ViewChild
 } from '@angular/core';
@@ -15,7 +16,7 @@ import { HighlightService } from './highlight.service';
   templateUrl: './highlight.component.html',
   styleUrls: ['./highlight.component.scss']
 })
-export class HighlightComponent implements AfterViewInit {
+export class HighlightComponent implements AfterViewInit, OnChanges {
 
   @ViewChild('highlight') element!: ElementRef;
 
@@ -23,8 +24,8 @@ export class HighlightComponent implements AfterViewInit {
 
   @Input() language: string | null = null;
 
-  @Output('area') area: EventEmitter<{
-    width: number,
+  @Output() area: EventEmitter<{
+        width: number,
     height: number
   }> = new EventEmitter()
 
