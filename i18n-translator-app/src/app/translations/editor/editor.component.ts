@@ -15,4 +15,10 @@ export class EditorComponent {
     event.preventDefault();
     this.code += '    ';
   }
+
+  resize(event: { width: number, height: number }) {
+    this.element.nativeElement.style.width = `${event.width}px`; 
+    this.element.nativeElement.style.height = `${event.height}px`;
+  }
+
 }

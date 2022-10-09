@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild
+} from '@angular/core';
 
 import { HighlightService } from './highlight.service';
 
@@ -15,23 +23,28 @@ export class HighlightComponent implements AfterViewInit {
 
   @Input() language: string | null = null;
 
+  @Output('area') area: EventEmitter<{
+    width: number,
+    height: number
+  }> = new EventEmitter()
+
   constructor(private highlightService: HighlightService) { }
 
   ngAfterViewInit() {
-    if (this.code && this.language) {
-      this.highlight();
-    }
+    this.code && this.language && this.highlight();
   }
 
   ngOnChanges(changes: any): void {
-    if (this.element && changes?.code) {
-      this.element.nativeElement.textContent = this.code;
-      this.highlight();
-    }
+    this.element && changes?.code && this.highlight();
   }
 
   highlight(): void {
+    this.element.nativeElement.textContent = this.code
     this.highlightService.highlightElement(this.element);
+    this.area.emit({
+      width: this.element.nativeElement.offsetWidth,
+      height: this.element.nativeElement.offsetHeight,
+    });
   }
 
 }

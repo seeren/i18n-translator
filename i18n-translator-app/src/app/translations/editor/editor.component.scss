@@ -7,6 +7,8 @@
 }
 
 textarea {
+    box-sizing: border-box;
+    z-index: 9;
     &:focus {
         border: none;
         outline: none !important;
@@ -15,9 +17,7 @@ textarea {
     -webkit-text-fill-color: transparent;
     border: none;
     resize: none;
-    color: black;
     background: none;
-    text-shadow: 0 1px white;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     font-size: 1em;
     text-align: left;

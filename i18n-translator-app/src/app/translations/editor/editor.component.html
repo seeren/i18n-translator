@@ -2,9 +2,9 @@
     class="p-4">
 
     <div fxFlex="50%" class="bg-grey-50 overflow-auto border relative">
-        <textarea #textarea [(ngModel)]="code" fxFlex="100%" class="overflow-auto"
-            (keydown.Tab)="indent($event)"></textarea>
-        <app-highlight language="yml" [code]="code" fxFlex="100% 100%" class="absolute overflow-auto" tabindex="-1">
+        <textarea #textarea [(ngModel)]="code" (keydown.Tab)="indent($event)"
+            class="absolute left-0 top-0 w-min-100 h-min-100 overflow-hidden"></textarea>
+        <app-highlight language="yml" [code]="code" (area)="resize($event)" class="absolute left-0 top-0" tabindex="-1">
         </app-highlight>
     </div>
 
