@@ -1,77 +1,41 @@
-<mat-toolbar
-   color="primary"
-   class="mat-elevation-z2">
-   <mat-toolbar-row>
-      <mat-icon
-         i18n="
-            @@logo-icon"
-         class="md-padding mr-1"
-         >language</mat-icon
-      >
-      <span
-         i18n="
-            @@icon-text"
-         class="mat-body"
-         >Internationalize</span
-      >
-      <span
-         fxFlex></span>
-      <div
-         fxFlex="10rem"
-         fxLayoutAlign="space-around"
-         i18n-fxLayoutAlign="
-            @@extension-select">
-         <mat-select
-            class="mat-body"
-            fxFlex="4rem"
-            [value]="
-               extensionService.extension
-            "
-            (selectionChange)="
-               extensionService.extension =
-                  $event.value
-            ">
-            <mat-option
-               *ngFor="
-                  let extension of extensionService.extensionList
-                     | keyvalue;
-                  trackBy: trackExtension
-               "
-               [value]="
-                  extension.key
-               ">
-               {{
-                  extension.value
-               }}
-            </mat-option>
-         </mat-select>
-         <mat-select
-            class="mat-body"
-            fxFlex="4rem"
-            [value]="
-               countryService.country
-            "
-            (selectionChange)="
-               countryService.country =
-                  $event.value
-            ">
-            <mat-option
-               *ngFor="
-                  let country of countryService.countryList
-                     | keyvalue;
-                  trackBy: trackCountry
-               "
-               [value]="
-                  country.key
-               ">
-               {{
-                  country.value
-               }}&nbsp;&nbsp;&nbsp;{{
-                  country.key
-               }}
-            </mat-option>
-         </mat-select>
-      </div>
-   </mat-toolbar-row>
+<mat-toolbar color="primary" class="mat-elevation-z2">
+  <mat-toolbar-row>
+    <mat-icon i18n="@@logo-icon" class="md-padding mr-1">language</mat-icon>
+    <span i18n="@@icon-text" class="mat-body">Internationalize</span>
+    <span fxFlex></span>
+    <div
+      fxFlex="10rem"
+      fxLayoutAlign="space-around"
+      i18n-fxLayoutAlign="@@extension-select">
+      <mat-select
+        class="mat-body"
+        fxFlex="4rem"
+        [value]="extensionService.extension"
+        (selectionChange)="extensionService.extension = $event.value">
+        <mat-option
+          *ngFor="
+            let extension of extensionService.extensionList | keyvalue;
+            trackBy: trackExtension
+          "
+          [value]="extension.key">
+          {{ extension.value }}
+        </mat-option>
+      </mat-select>
+      <mat-select
+        class="mat-body"
+        fxFlex="4rem"
+        [value]="countryService.country"
+        (selectionChange)="countryService.country = $event.value">
+        <mat-option
+          *ngFor="
+            let country of countryService.countryList | keyvalue;
+            trackBy: trackCountry
+          "
+          [value]="country.key">
+          {{ country.value }}&nbsp;&nbsp;&nbsp;{{ country.key }}
+        </mat-option>
+      </mat-select>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>
