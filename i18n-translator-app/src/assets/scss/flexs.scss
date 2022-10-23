@@ -1,19 +1,19 @@
 @mixin responsive($prefix) {
-    .#{$prefix}shrink {
-        flex-shrink: 1;
+  .#{$prefix}shrink {
+    flex-shrink: 1;
+  }
+  .#{$prefix}no-shrink {
+    flex-shrink: 0;
+  }
+  .#{$prefix}grow {
+    flex-grow: 1;
+  }
+  .#{$prefix}no-grow {
+    flex-grow: 0;
+  }
+  @each $direction in (row, column) {
+    .#{$prefix}flex-#{$direction} {
+      flex-direction: $direction;
     }
-    .#{$prefix}no-shrink {
-        flex-shrink: 0;
-    }
-    .#{$prefix}grow {
-        flex-grow: 1;
-    }
-    .#{$prefix}no-grow {
-        flex-grow: 0;
-    }
-    @each $direction in (row, column) {
-        .#{$prefix}flex-#{$direction} {
-            flex-direction: $direction;
-        }
-    }
+  }
 }

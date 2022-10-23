@@ -10,12 +10,10 @@ import 'prismjs/components/prism-markup-templating';
 declare var Prism: any;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HighlightService {
-
   public highlightElement(elementRef: ElementRef): void {
     return Prism.highlightElement(elementRef.nativeElement);
   }
-
 }

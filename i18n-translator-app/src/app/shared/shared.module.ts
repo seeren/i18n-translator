@@ -6,14 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  exports: [
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule,
-    FlexLayoutModule,
-  ]
+  imports: [CommonModule],
+  exports: [FormsModule, ReactiveFormsModule, MaterialModule, FlexLayoutModule],
 })
-export class SharedModule { }
+export class SharedModule {}

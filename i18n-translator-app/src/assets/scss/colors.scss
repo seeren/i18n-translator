@@ -3,55 +3,55 @@
 $colors-map: ();
 
 @each $name,
-    $color
-        in (
-            "red": mat.$red-palette,
-            "pink": mat.$pink-palette,
-            "purple": mat.$purple-palette,
-            "deep-purple": mat.$deep-purple-palette,
-            "indigo": mat.$indigo-palette,
-            "blue": mat.$blue-palette,
-            "light-blue": mat.$light-blue-palette,
-            "cyan": mat.$cyan-palette,
-            "teal": mat.$teal-palette,
-            "green": mat.$green-palette,
-            "light-green": mat.$light-green-palette,
-            "lime": mat.$lime-palette,
-            "yellow": mat.$yellow-palette,
-            "amber": mat.$amber-palette,
-            "orange": mat.$orange-palette,
-            "deep-orange": mat.$deep-orange-palette,
-            "brown": mat.$brown-palette,
-            "grey": mat.$grey-palette,
-            "blue-grey": mat.$blue-grey-palette
-        )
+  $color
+    in (
+      "red": mat.$red-palette,
+      "pink": mat.$pink-palette,
+      "purple": mat.$purple-palette,
+      "deep-purple": mat.$deep-purple-palette,
+      "indigo": mat.$indigo-palette,
+      "blue": mat.$blue-palette,
+      "light-blue": mat.$light-blue-palette,
+      "cyan": mat.$cyan-palette,
+      "teal": mat.$teal-palette,
+      "green": mat.$green-palette,
+      "light-green": mat.$light-green-palette,
+      "lime": mat.$lime-palette,
+      "yellow": mat.$yellow-palette,
+      "amber": mat.$amber-palette,
+      "orange": mat.$orange-palette,
+      "deep-orange": mat.$deep-orange-palette,
+      "brown": mat.$brown-palette,
+      "grey": mat.$grey-palette,
+      "blue-grey": mat.$blue-grey-palette
+    )
 {
-    @each $level, $value in $color {
-        @if $level !=contrast {
-            $colors-map: map-merge(
-                $colors-map,
-                (
-                    "#{$name}-#{$level}": $value,
-                )
-            );
-            .#{$name}-#{$level} {
-                color: $value;
-            }
-            .hover:#{$name}-#{$level}:hover {
-                background-color: $value;
-            }
-            .bg-#{$name}-#{$level} {
-                background-color: $value;
-            }
-            .hover:bg-#{$name}-#{$level}:hover {
-                background-color: $value;
-            }
-        }
+  @each $level, $value in $color {
+    @if $level !=contrast {
+      $colors-map: map-merge(
+        $colors-map,
+        (
+          "#{$name}-#{$level}": $value,
+        )
+      );
+      .#{$name}-#{$level} {
+        color: $value;
+      }
+      .hover:#{$name}-#{$level}:hover {
+        background-color: $value;
+      }
+      .bg-#{$name}-#{$level} {
+        background-color: $value;
+      }
+      .hover:bg-#{$name}-#{$level}:hover {
+        background-color: $value;
+      }
     }
+  }
 }
 
 :root {
-    @each $key, $value in $colors-map {
-        --#{$key}: #{$value};
-    }
+  @each $key, $value in $colors-map {
+    --#{$key}: #{$value};
+  }
 }

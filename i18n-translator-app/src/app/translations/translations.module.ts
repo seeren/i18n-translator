@@ -7,14 +7,12 @@ import { SharedModule } from '../shared/shared.module';
 import { EditorModule } from './editor/editor.module';
 
 @NgModule({
-  declarations: [
-    TranslationsComponent,
-  ],
+  declarations: [TranslationsComponent],
   imports: [
     CommonModule,
     SharedModule,
     EditorModule,
-    TranslationsRoutingModule
+    TranslationsRoutingModule,
   ],
 })
-export class TranslationsModule { }
+export class TranslationsModule {}

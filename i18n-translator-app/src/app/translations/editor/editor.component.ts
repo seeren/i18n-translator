@@ -3,10 +3,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
-  styleUrls: ['./editor.component.scss']
+  styleUrls: ['./editor.component.scss'],
 })
 export class EditorComponent {
-
   @ViewChild('textarea') element!: ElementRef;
 
   public code: string = '';
@@ -16,9 +15,8 @@ export class EditorComponent {
     this.code += '    ';
   }
 
-  resize(event: { width: number, height: number }) {
-    this.element.nativeElement.style.width = `${event.width}px`; 
+  resize(event: { width: number; height: number }) {
+    this.element.nativeElement.style.width = `${event.width}px`;
     this.element.nativeElement.style.height = `${event.height}px`;
   }
-
 }

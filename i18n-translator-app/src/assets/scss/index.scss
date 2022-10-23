@@ -6,25 +6,19 @@
 @use "./overflows.scss" as overflows;
 @use "./positions.scss" as positions;
 
-@import './colors.scss';
-@each $key, $value in (
-    '': 200,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-) {
-    @media (min-width: #{$value}px) {
-        $prefix: '';
-        @if $key != '' {
-            $prefix: $key + ':';
-        }
-        @include margins.responsive(#{$prefix});
-        @include paddings.responsive(#{$prefix});
-        @include dimensions.responsive(#{$prefix});
-        @include displays.responsive(#{$prefix});
-        @include flexs.responsive(#{$prefix});
-        @include overflows.responsive(#{$prefix});
-        @include positions.responsive(#{$prefix});
+@import "./colors.scss";
+@each $key, $value in ("": 200, sm: 576, md: 768, lg: 992, xl: 1200) {
+  @media (min-width: #{$value}px) {
+    $prefix: "";
+    @if $key != "" {
+      $prefix: $key + ":";
     }
+    @include margins.responsive(#{$prefix});
+    @include paddings.responsive(#{$prefix});
+    @include dimensions.responsive(#{$prefix});
+    @include displays.responsive(#{$prefix});
+    @include flexs.responsive(#{$prefix});
+    @include overflows.responsive(#{$prefix});
+    @include positions.responsive(#{$prefix});
+  }
 }

@@ -1,13 +1,13 @@
 @mixin responsive($prefix) {
-    @each $overflow in (hidden, auto, scroll) {
-        .#{$prefix}overflow-#{$overflow} {
-            overflow: $overflow;
-        }
-        .#{$prefix}overflow-x-#{$overflow} {
-            overflow-x: $overflow;
-        }
-        .#{$prefix}overflow-y-#{$overflow} {
-            overflow-y: $overflow;
-        }
+  @each $overflow in (hidden, auto, scroll) {
+    .#{$prefix}overflow-#{$overflow} {
+      overflow: $overflow;
     }
+    .#{$prefix}overflow-x-#{$overflow} {
+      overflow-x: $overflow;
+    }
+    .#{$prefix}overflow-y-#{$overflow} {
+      overflow-y: $overflow;
+    }
+  }
 }

@@ -1,18 +1,18 @@
 $coeficient: 25;
 
 @mixin responsive($prefix) {
-    @each $position in (absolute, relative, fixed, static) {
-        .#{$prefix}#{$position} {
-            position: $position;
-        }
+  @each $position in (absolute, relative, fixed, static) {
+    .#{$prefix}#{$position} {
+      position: $position;
     }
-    @each $corner in (top, right, bottom, left) {
-        @for $n from 0 through 4 {
-            $key: $n * $coeficient;
-            $value: $key * 1%;
-            .#{$prefix}#{$corner}-#{$key} {
-                #{$corner}: $value;
-            }
-        }
+  }
+  @each $corner in (top, right, bottom, left) {
+    @for $n from 0 through 4 {
+      $key: $n * $coeficient;
+      $value: $key * 1%;
+      .#{$prefix}#{$corner}-#{$key} {
+        #{$corner}: $value;
+      }
     }
+  }
 }

@@ -1,7 +1,7 @@
 @mixin responsive($prefix) {
-    @each $display in (flex, block, inline, inline-block, none) {
-        .#{$prefix}#{$display} {
-            display: $display;
-        }
+  @each $display in (flex, block, inline, inline-block, none) {
+    .#{$prefix}#{$display} {
+      display: $display;
     }
+  }
 }
