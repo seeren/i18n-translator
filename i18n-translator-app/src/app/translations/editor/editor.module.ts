@@ -7,7 +7,10 @@ import { HighlightService } from './highlight/highlight.service';
 import { HighlightComponent } from './highlight/highlight.component';
 
 @NgModule({
-  declarations: [EditorComponent, HighlightComponent],
+  declarations: [
+    EditorComponent, 
+    HighlightComponent,
+  ],
   imports: [CommonModule, SharedModule],
   exports: [EditorComponent],
   providers: [HighlightService],

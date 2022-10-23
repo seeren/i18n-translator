@@ -1,5 +1,5 @@
 import { KeyValue } from '@angular/common';
-import { Component, TrackByFunction } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CountryService } from './shared/services/country.service';
 import { ExtensionService } from './shared/services/extension.service';
@@ -12,7 +12,7 @@ import { ExtensionService } from './shared/services/extension.service';
 export class AppComponent {
   constructor(
     public extensionService: ExtensionService,
-    public countryService: CountryService
+    public countryService: CountryService,
   ) {}
 
   public trackExtension(index: number, item: KeyValue<string, string>): string {    

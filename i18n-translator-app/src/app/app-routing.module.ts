@@ -5,9 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./translations/translations.module').then(
-        (m) => m.TranslationsModule
-      ),
+      import('./translations/translations.module').then((m) => m.TranslationsModule),
   },
   {
     path: '**',

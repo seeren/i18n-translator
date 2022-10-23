@@ -24,10 +24,7 @@ export class HighlightComponent implements AfterViewInit, OnChanges {
 
   @Input() language: string | null = null;
 
-  @Output() area: EventEmitter<{
-        width: number,
-    height: number
-  }> = new EventEmitter()
+  @Output() area: EventEmitter<{width: number,height: number}> = new EventEmitter()
 
   constructor(private highlightService: HighlightService) { }
 
