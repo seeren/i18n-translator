@@ -1,4 +1,4 @@
-@import "./assets/scss/index.scss";
+@import './assets/scss/index.scss';
 
 html,
 body {
@@ -7,5 +7,5 @@ body {
 }
 body {
   @extend .m-0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

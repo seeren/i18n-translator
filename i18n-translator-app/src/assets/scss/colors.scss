@@ -1,29 +1,29 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 
 $colors-map: ();
 
 @each $name,
   $color
     in (
-      "red": mat.$red-palette,
-      "pink": mat.$pink-palette,
-      "purple": mat.$purple-palette,
-      "deep-purple": mat.$deep-purple-palette,
-      "indigo": mat.$indigo-palette,
-      "blue": mat.$blue-palette,
-      "light-blue": mat.$light-blue-palette,
-      "cyan": mat.$cyan-palette,
-      "teal": mat.$teal-palette,
-      "green": mat.$green-palette,
-      "light-green": mat.$light-green-palette,
-      "lime": mat.$lime-palette,
-      "yellow": mat.$yellow-palette,
-      "amber": mat.$amber-palette,
-      "orange": mat.$orange-palette,
-      "deep-orange": mat.$deep-orange-palette,
-      "brown": mat.$brown-palette,
-      "grey": mat.$grey-palette,
-      "blue-grey": mat.$blue-grey-palette
+      'red': mat.$red-palette,
+      'pink': mat.$pink-palette,
+      'purple': mat.$purple-palette,
+      'deep-purple': mat.$deep-purple-palette,
+      'indigo': mat.$indigo-palette,
+      'blue': mat.$blue-palette,
+      'light-blue': mat.$light-blue-palette,
+      'cyan': mat.$cyan-palette,
+      'teal': mat.$teal-palette,
+      'green': mat.$green-palette,
+      'light-green': mat.$light-green-palette,
+      'lime': mat.$lime-palette,
+      'yellow': mat.$yellow-palette,
+      'amber': mat.$amber-palette,
+      'orange': mat.$orange-palette,
+      'deep-orange': mat.$deep-orange-palette,
+      'brown': mat.$brown-palette,
+      'grey': mat.$grey-palette,
+      'blue-grey': mat.$blue-grey-palette
     )
 {
   @each $level, $value in $color {
@@ -31,7 +31,7 @@ $colors-map: ();
       $colors-map: map-merge(
         $colors-map,
         (
-          "#{$name}-#{$level}": $value,
+          '#{$name}-#{$level}': $value,
         )
       );
       .#{$name}-#{$level} {

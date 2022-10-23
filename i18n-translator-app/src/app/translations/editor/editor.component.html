@@ -1,14 +1,13 @@
 <div
   fxLayout="row"
-  i18n-fxLayout="@@editor-container-row"
   fxLayout.sm="column"
-  i18n-fxLayout.sm="@@editor-container-column"
   fxFlex="0 0 100%"
   fxLayoutAlign="space-around"
-  i18n-fxLayoutAlign="@@editor-container-align"
   fxLayoutGap="1.25em"
   class="p-4">
-  <div fxFlex="50%" class="bg-grey-50 overflow-auto border relative">
+  <div
+    fxFlex="50%"
+    class="bg-grey-50 overflow-auto border relative">
     <textarea
       #textarea
       [(ngModel)]="code"
@@ -16,17 +15,16 @@
       class="absolute left-0 top-0 w-min-100 h-min-100 overflow-hidden"></textarea>
     <app-highlight
       language="yml"
-      i18n-language="@@language-editable"
       [code]="code"
       (area)="resize($event)"
       class="absolute left-0 top-0">
     </app-highlight>
   </div>
-
-  <div fxFlex="50%" class="bg-grey-50 overflow-auto border">
+  <div
+    fxFlex="50%"
+    class="bg-grey-50 overflow-auto border">
     <app-highlight
       language="yml"
-      i18n-language="@@language-result"
       [code]="code"></app-highlight>
   </div>
 </div>
